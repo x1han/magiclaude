@@ -28,6 +28,12 @@ magiclaude is a lightweight JupyterLab assistant that uses Claude to edit or gen
 
 ## Quick Start ⚙️
 
+### 0) Install Claude Code CLI (prerequisite)
+
+```bash
+npm install -g @anthropic-ai/claude-code --registry=https://registry.npmmirror.com
+```
+
 ### 1) Install Python package
 
 ```bash
