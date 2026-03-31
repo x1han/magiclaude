@@ -1,0 +1,28 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "title": "magiclaude Settings",
+  "description": "Settings for magiclaude JupyterLab extension",
+  "type": "object",
+  "properties": {
+    "claude_executable_path": {
+      "type": "string",
+      "title": "Claude Executable Path",
+      "description": "Path to local claude CLI executable.",
+      "default": "claude"
+    },
+    "jcm_mode": {
+      "type": "string",
+      "title": "Routing Mode",
+      "description": "Routing mode for Claude execution.",
+      "enum": ["local", "remote_mgt"],
+      "default": "local"
+    },
+    "remote_broker_url": {
+      "type": "string",
+      "title": "Remote Broker URL",
+      "description": "Remote broker URL used when mode is remote_mgt.",
+      "default": "http://127.0.0.1:1207"
+    }
+  },
+  "additionalProperties": false
+}

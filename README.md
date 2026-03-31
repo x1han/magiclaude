@@ -1,32 +1,32 @@
-# magiclaude
+# magiclaude ✨
 
-The magic touch of Claude in your Jupyter Notebook.
+**The magic touch of Claude in your Jupyter Notebook.**
 
-magiclaude 是一个轻量的 JupyterLab 智能助手扩展，通过 `@c ... @c` 或 `@n ... @n` 指令块触发 Claude，自动改写当前单元格或在下方生成多个单元格。
+magiclaude is a lightweight JupyterLab assistant that uses Claude to edit or generate notebook content from inline trigger blocks.
 
-## Features
+## Features 🚀
 
-- Block trigger syntax in notebook cells:
-  - `@c ... @c`: edit current cell
-  - `@n ... @n`: notebook-level edit and generation
-- Local/remote routing:
-  - local node Claude CLI
-  - remote mgt broker via tunnel
-- Strict JSON patch mode:
+- Trigger syntax directly in notebook cells:
+  - `@c ... @c` → edit the current cell
+  - `@n ... @n` → notebook-level generation/editing
+- Flexible routing modes:
+  - local Claude CLI execution
+  - remote broker execution
+- Strict JSON operation mode:
   - `replace_cell`
   - `insert_cell_after`
-- Settings UI in JupyterLab:
+- JupyterLab Settings UI support:
   - `claude_executable_path`
   - `jcm_mode`
   - `remote_broker_url`
 
-## Project Layout
+## Project Layout 🧩
 
 - `magiclaude/` — Jupyter server extension
 - `labextension/` — JupyterLab frontend extension
-- `magiclaude_broker/` — remote broker service
+- `magiclaude_broker/` — optional remote broker service
 
-## Quick Start
+## Quick Start ⚙️
 
 ### 1) Install Python package
 
@@ -34,7 +34,7 @@ magiclaude 是一个轻量的 JupyterLab 智能助手扩展，通过 `@c ... @c`
 pip install -e .
 ```
 
-### 2) Build frontend
+### 2) Build frontend extension
 
 ```bash
 cd labextension
@@ -54,17 +54,7 @@ uvicorn magiclaude_broker.app:app --host 127.0.0.1 --port 1207
 jupyter lab
 ```
 
-## n10 -> mgt tunnel
-
-On n10:
-
-```bash
-ssh -N -L 1207:127.0.0.1:1207 <user>@<mgt-host>
-```
-
-Then set `remote_broker_url` to `http://127.0.0.1:1207`.
-
-## Trigger Usage
+## Trigger Usage 🪄
 
 In an active notebook cell:
 
