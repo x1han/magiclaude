@@ -28,19 +28,28 @@ MagiClaude is a lightweight JupyterLab assistant that uses Claude to edit or gen
 
 ## Quick Start ⚙️
 
-### 0) Install Claude Code CLI (prerequisite)
+### 0) Get the source code
+
+Clone this repository first:
+
+```bash
+git clone git@github.com:x1han/magiclaude.git
+cd magiclaude
+```
+
+### 1) Install Claude Code CLI (prerequisite)
 
 ```bash
 npm install -g @anthropic-ai/claude-code --registry=https://registry.npmmirror.com
 ```
 
-### 1) Install Python package
+### 2) Install Python package
 
 ```bash
 pip install -e .
 ```
 
-### 2) Build frontend extension
+### 3) Build frontend extension
 
 ```bash
 cd labextension
@@ -48,13 +57,13 @@ npm install
 npm run build
 ```
 
-### 3) (Optional) Run remote broker
+### 4) (Optional) Run remote broker
 
 ```bash
 uvicorn magiclaude_broker.app:app --host 127.0.0.1 --port 1207
 ```
 
-### 4) Start JupyterLab
+### 5) Start JupyterLab
 
 ```bash
 jupyter lab
