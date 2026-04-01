@@ -1,4 +1,4 @@
-# magiclaude ✨
+# MagiClaude ✨
 
 **The magic touch of Claude in your Jupyter Notebook.**
 
