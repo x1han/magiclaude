@@ -2,7 +2,7 @@
 
 **The magic touch of Claude in your Jupyter Notebook.**
 
-magiclaude is a lightweight JupyterLab assistant that uses Claude to edit or generate notebook content from inline trigger blocks.
+MagiClaude is a lightweight JupyterLab assistant that uses Claude to edit or generate notebook content from inline trigger blocks.
 
 ## Features 🚀
 
